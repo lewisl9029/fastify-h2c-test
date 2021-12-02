@@ -1,0 +1,9 @@
+*
+!/main.js
+!/package.json
+!/yarn.lock
+!/yarnrc.yml
+!/.yarn/cache/*
+!/.yarn/releases/*
+!/.pnp.cjs
+!/.pnp.loader.mjs

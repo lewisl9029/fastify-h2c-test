@@ -1,0 +1,15 @@
+{
+  "name": "@lewisl9029/fastify-h2c-test",
+  "version": "1.0.0",
+  "main": "main.js",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node main.js",
+    "fly": "fly"
+  },
+  "dependencies": {
+    "fastify": "^3.24.1"
+  },
+  "packageManager": "yarn@3.1.1"
+}
