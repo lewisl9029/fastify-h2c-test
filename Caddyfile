@@ -1,0 +1,9 @@
+{
+  admin off
+}
+
+fastify-h2c-test.localhost {
+  reverse_proxy h2c://localhost:58080 {
+    # flush_interval 1
+  }
+}
