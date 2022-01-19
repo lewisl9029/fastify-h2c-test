@@ -7,7 +7,7 @@ const fastify = fastify_.default({
 
 const index = fs_.promises.readFile("./index.html");
 
-fastify.get("/", async (request, response) => {
+fastify.get("/", (request, response) => {
   response.headers({
     "content-type": "text/html",
   });

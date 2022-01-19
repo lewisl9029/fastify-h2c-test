@@ -1,8 +1,17 @@
 <html>
+  <form id="form">
+    <label for="requests">Number of requests</label>
+    <input id="requests" placeholder="100" value="100" />
+    <button type="submit">Run</button>
+  </form>
   <script>
-    const start = performance.now();
-    Promise.all(Array.from({ length: 100 }).map(() => fetch("/noop"))).then(
-      () => console.log(performance.now() - start)
-    );
+    document.getElementById("form").addEventListener("submit", (event) => {
+      event.preventDefault();
+      const requests = Number(document.getElementById("requests").value);
+      const start = performance.now();
+      Promise.all(
+        Array.from({ length: requests }).map(() => fetch("/noop"))
+      ).then(() => console.log(performance.now() - start));
+    });
   </script>
 </html>
