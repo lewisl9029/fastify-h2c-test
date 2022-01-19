@@ -1,5 +1,6 @@
 *
 !/main.js
+!/index.html
 !/package.json
 !/yarn.lock
 !/yarnrc.yml

@@ -1,0 +1,8 @@
+<html>
+  <script>
+    const start = performance.now();
+    Promise.all(Array.from({ length: 100 }).map(() => fetch("/noop"))).then(
+      () => console.log(performance.now() - start)
+    );
+  </script>
+</html>
