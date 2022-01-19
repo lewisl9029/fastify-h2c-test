@@ -2,12 +2,13 @@ import * as fastify_ from "fastify";
 import * as fs_ from "fs";
 
 const fastify = fastify_.default({
+  http2: true,
   logger: true,
 });
 
 const index = fs_.promises.readFile("./index.html");
 
-fastify.get("/", async (request, response) => {
+fastify.get("/", (request, response) => {
   response.headers({
     "content-type": "text/html",
   });
