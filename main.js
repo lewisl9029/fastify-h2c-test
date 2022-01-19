@@ -15,7 +15,13 @@ fastify.get("/", (request, response) => {
   return index;
 });
 
-fastify.get("/noop", () => "hi");
+fastify.get("/noop", (request, response) => {
+  response.headers({
+    "cache-control": "no-cache, no-store",
+  });
+
+  return "hi";
+});
 (async () => {
   try {
     await fastify.listen(58080, "::");

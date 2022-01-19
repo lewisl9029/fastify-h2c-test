@@ -10,7 +10,9 @@
       const requests = Number(document.getElementById("requests").value);
       const start = performance.now();
       Promise.all(
-        Array.from({ length: requests }).map(() => fetch("/noop"))
+        Array.from({ length: requests }).map(() =>
+          fetch("/noop?nonce=" + Math.random())
+        )
       ).then(() => console.log(performance.now() - start));
     });
   </script>
